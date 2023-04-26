@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<h1 class="container mt-5 text-center">Consultations</h1>
+
+<div id="consultations">
+  <div class="container mt-5 text-center">
+    <div class="card-body"></div>
+  <% @consultations.each do |consultation| %>
+    <%= render consultation %>
+    <p>
+      <%= link_to "Show this consultation", consultation %>
+    </p>
+  <% end %>
+
+
+
+<%= link_to "New consultation", new_consultation_path %>
+<%= link_to "meetings", consultations_path %>
+</div>
+</div>
